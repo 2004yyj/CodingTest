@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,56 +8,57 @@ public class Main {
         rand.setSeed(System.currentTimeMillis());
 
         int[] randNums = new int[3];
+
         for (int i = 0; i < randNums.length; i++) {
             randNums[i] = rand.nextInt(9);
+            while(true) {
+                if (i > 0 && randNums[i - 1] == randNums[i]) {
+                    randNums[i] = rand.nextInt(9);
+                }
+                break;
+            }
         }
 
         Scanner sc = new Scanner(System.in);
+        
+        while(true) {
 
-        int ballCnt = 0;
-        int strikeCnt = 0;
+            try {
+                int[] inputNums = inputNum(sc);
 
-        try {
-            int[] inputNums = inputNum(sc);
+                int ballCnt = 0;
+                int strikeCnt = 0;
 
-            for (int i = 0; i < randNums.length; i++) {
-                for (int j = 0; j < inputNums.length; j++) {
-                    if (randNums[i] == inputNums[j]) {
-                        if (i == j) {
-                            strikeCnt++;
-                        } else {
-                            ballCnt++;
+                for (int i = 0; i < inputNums.length; i++) {
+                    for (int j = 0; j < randNums.length; j++) {
+                        if (randNums[j] == inputNums[i]) {
+                            if (i == j) {
+                                strikeCnt++;
+                            } else {
+                                ballCnt++;
+                            }
                         }
                     }
                 }
-            }
 
-            if (strikeCnt == 0 && ballCnt == 0) {
-                System.out.println("아웃");
-            } else {
-                System.out.println(strikeCnt + "S" + ballCnt + "B");
-            }
-            System.out.println("숫자를 맞춰보세요");
-            inputNums = inputNum(sc);
-
-            boolean flags = false;
-            for (int i = 0; i < randNums.length; i++) {
-                if (randNums[i] != inputNums[i]) {
-                    flags = true;
-                    break;
+                if (strikeCnt == 0 && ballCnt == 0) {
+                    System.out.println("아웃");
+                } else {
+                    if (strikeCnt == 3) {
+                        System.out.println("정답입니다.");
+                        break;
+                    } else {
+                        System.out.println(strikeCnt + "S" + ballCnt + "B");
+                    }
                 }
-            }
 
-            if (flags) {
-                System.out.println("틀렸습니다.");
-            } else {
-                System.out.println("정답입니다.");
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("정확히 3자리수까지 입력해주세요.");
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("숫자만 입력해주세요.");
+                break;
             }
-
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("정확히 3자리수까지 입력해주세요.");
-        } catch (NumberFormatException e) {
-            throw new NumberFormatException("숫자만 입력해주세요.");
         }
     }
 
