@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CodingTest.iml" filepath="$PROJECT_DIR$/.idea/CodingTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/가운데 글자 가져오기/가운데 글자 가져오기.iml" filepath="$PROJECT_DIR$/가운데 글자 가져오기/가운데 글자 가져오기.iml" />
+      <module fileurl="file://$PROJECT_DIR$/나머지가 1이 되는 수 찾기/나머지가 1이 되는 수 찾기.iml" filepath="$PROJECT_DIR$/나머지가 1이 되는 수 찾기/나머지가 1이 되는 수 찾기.iml" />
       <module fileurl="file://$PROJECT_DIR$/내적/내적.iml" filepath="$PROJECT_DIR$/내적/내적.iml" />
       <module fileurl="file://$PROJECT_DIR$/더 맵게/더 맵게.iml" filepath="$PROJECT_DIR$/더 맵게/더 맵게.iml" />
       <module fileurl="file://$PROJECT_DIR$/두 개 뽑아서 더하기/두 개 뽑아서 더하기.iml" filepath="$PROJECT_DIR$/두 개 뽑아서 더하기/두 개 뽑아서 더하기.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/모의고사/모의고사.iml" filepath="$PROJECT_DIR$/모의고사/모의고사.iml" />
       <module fileurl="file://$PROJECT_DIR$/소수 만들기/소수 만들기.iml" filepath="$PROJECT_DIR$/소수 만들기/소수 만들기.iml" />
       <module fileurl="file://$PROJECT_DIR$/소수 찾기/소수 찾기.iml" filepath="$PROJECT_DIR$/소수 찾기/소수 찾기.iml" />
+      <module fileurl="file://$PROJECT_DIR$/숫자 문자열과 영단어/숫자 문자열과 영단어.iml" filepath="$PROJECT_DIR$/숫자 문자열과 영단어/숫자 문자열과 영단어.iml" />
       <module fileurl="file://$PROJECT_DIR$/신고 결과 받기/신고 결과 받기.iml" filepath="$PROJECT_DIR$/신고 결과 받기/신고 결과 받기.iml" />
       <module fileurl="file://$PROJECT_DIR$/실패율/실패율.iml" filepath="$PROJECT_DIR$/실패율/실패율.iml" />
       <module fileurl="file://$PROJECT_DIR$/야구게임/야구게임.iml" filepath="$PROJECT_DIR$/야구게임/야구게임.iml" />
